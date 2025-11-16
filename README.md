@@ -163,8 +163,7 @@ Files to download:
 ✔ id2label.pkl  
 ✔ comments_dataset.csv  
 
-# 📦 Explanation of All Four Files (One Single Cell – Short, Clear, School-Friendly)
-
+# 📦 Explanation of All Four Files 
 Below are the four important files your project creates.  
 This cell explains **what they are**, **why they are needed**, and **how they help the AI work**.
 
