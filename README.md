@@ -163,6 +163,86 @@ Files to download:
 ✔ id2label.pkl  
 ✔ comments_dataset.csv  
 
+# 📦 Explanation of All Four Files (One Single Cell – Short, Clear, School-Friendly)
+
+Below are the four important files your project creates.  
+This cell explains **what they are**, **why they are needed**, and **how they help the AI work**.
+
+---
+
+### ✔ 1) comments_dataset.csv  
+This is your **training data**.  
+It contains many examples of comments and their correct categories.  
+The AI studies this file to learn:
+
+- what Praise looks like  
+- what Spam looks like  
+- what Hate looks like  
+- what Constructive Criticism looks like  
+
+Without this file, the AI **cannot learn anything**.
+
+---
+
+### ✔ 2) tfidf_lr_model.pkl  
+This is your **trained AI model**.  
+It contains two things together:
+
+1. **TF-IDF Vectorizer**  
+   - turns sentences into numbers  
+   - helps the AI understand text  
+
+2. **Logistic Regression Classifier**  
+   - predicts the correct category  
+
+Once this file is created, the AI does **NOT** need training again.  
+You just load this file and use it to classify new comments instantly.
+
+---
+
+### ✔ 3) label2id.pkl  
+This file maps each **label name → number**.  
+Machine learning works with numbers, not words.
+
+Example:
+- "Praise" → 0  
+- "Spam" → 5  
+- "Hate/Abuse" → 3  
+
+This file was used during training so the model understands categories as numbers.
+
+---
+
+### ✔ 4) id2label.pkl  
+This file does the opposite mapping:  
+**number → label name**
+
+Example:
+- 0 → "Praise"  
+- 5 → "Spam"  
+- 3 → "Hate/Abuse"  
+
+The AI predicts numbers, and this file helps convert them back to readable words.
+
+---
+
+### 🔄 How All Four Files Work Together (Very Simple)
+
+1. **comments_dataset.csv**  
+   → teaches the model how different comments look.
+
+2. **tfidf_lr_model.pkl**  
+   → the final trained brain that predicts categories.
+
+3. **label2id.pkl**  
+   → used during training so the model understands labels as numbers.
+
+4. **id2label.pkl**  
+   → used after prediction to turn numbers back into words.
+
+All four files together make the comment categorizer work smoothly.
+
+
 # 📥 **Sample Input and Output Examples**
 
 Below are simple examples to show how the Comment Categorizer works.
