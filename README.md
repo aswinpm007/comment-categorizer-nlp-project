@@ -62,11 +62,13 @@ This explains why we write that code.
 
 ## 🟦 **Cell 1 — Load CSV File**
 
+```python
 import pandas as pd
 df = pd.read_csv("comments_dataset.csv")
 print("Rows:", len(df))
 display(df.head(10))
 df['label'].value_counts()
+```
 
 
 
@@ -77,7 +79,7 @@ df['label'].value_counts()
 
 ## 🟦 **Cell 2 — Download NLTK Tools**
 
-
+```python
 import re
 import nltk
 nltk.download('punkt')
@@ -87,6 +89,8 @@ nltk.download('wordnet')
 nltk.download('averaged_perceptron_tagger')
 nltk.download('averaged_perceptron_tagger_eng')
 nltk.download('omw-1.4')
+```
+
 
 
 
